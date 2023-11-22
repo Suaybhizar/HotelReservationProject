@@ -34,7 +34,7 @@ https://github.com/Suaybhizar/HotelReservationProject/assets/76668077/651bd52c-6
 ## E-Posta Entegrasyonu:
 ### Rezervasyon işlemlerinde kullanıcıların gerçek e-posta adreslerine rezervasyon bilgilerini iletmek için AspNet Core Identity ve e-posta entegrasyonu kullanılmaktadır.
 
-## Çok Katmanlı Mimarilik:
+## Çok Katmanlı Mimari:
 ### Uygulama, iş mantığı, veri erişimi, kullanıcı arayüzü gibi farklı katmanlara sahip bir mimariyi benimsemektedir. Bu, kodun bakımını ve genişletilebilirliğini artırır.
 
 ### Bu teknolojilerin entegrasyonu, projenin güçlü bir temel üzerine inşa edilmiş olmasını sağlamaktadır. Bu sayede kullanıcılar, tatmin edici bir kullanıcı deneyimi yaşarken, güvenlik ve veri alışverişi gibi önemli konularda da etkili çözümler elde edilmektedir.
