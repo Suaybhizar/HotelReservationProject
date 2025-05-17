@@ -68,10 +68,14 @@ cd HotelReservationProject
 dotnet restore
 ```
 
-4. Veritabanını güncelleyin:
+4. Migration oluşturun ve veritabanını güncelleyin:
 
-```bash
-dotnet ef database update
+```powershell
+# Migration oluşturma
+Add-Migration InitialCreate -Project HotelProject.DataAccessLayer -StartupProject HotelProject.WebUI
+
+# Veritabanını güncelleme
+Update-Database -Project HotelProject.DataAccessLayer -StartupProject HotelProject.WebUI
 ```
 
 5. Projeyi çalıştırın:
@@ -88,7 +92,7 @@ Katkılar memnuniyetle karşılanır! İyileştirmeler ve hata düzeltmeleri iç
 
 Bu proje MIT Lisansı ile lisanslanmıştır.
 
-<br>
+<br/>
 
 # Hotel Reservation Project
 
@@ -107,15 +111,15 @@ The Hotel Reservation Project is a comprehensive hotel management system built o
 
 ## 🛠️ Technologies Used
 
-* AspNet Core 5.0: Fast, modular, and cross-platform framework for building high-performance web applications.
-* MVC (Model-View-Controller) Architecture: Supports a modular development approach with a clear separation between user interface (View), business logic (Model), and data management (Controller).
-* Entity Framework Core: Simplifies database operations, enabling easy data management and integration with AspNet Core Identity for secure user authentication.
-* DTO (Data Transfer Object) Classes: Includes DTOs for efficient data transfer between API layers.
-* Swagger: Automatically generates and tests API documentation, making it easier to debug and understand API endpoints.
-* JWT (JSON Web Token) Authorization: Provides secure and portable authentication using AspNet Core Identity and JWT tokens.
-* Rapid API: Integrates with external data sources like hotel reservations, exchange rates, flight information, and social media metrics.
-* Email Integration: Supports email notifications for reservation confirmations using AspNet Core Identity.
-* Multi-Layered Architecture: Separates business logic, data access, and user interfaces for scalable and maintainable code.
+* **AspNet Core 5.0:** A high-performance, modular, and cross-platform framework for building web applications.
+* **MVC (Model-View-Controller) Architecture:** Provides a modular development approach by separating user interface (View), business logic (Model), and data management (Controller).
+* **Entity Framework Core:** Simplifies database operations and integrates with AspNet Core Identity for secure user authentication.
+* **DTO (Data Transfer Object) Classes:** Efficient data structures for transferring data between API layers.
+* **Swagger:** Automatically generates API documentation, making it easier to understand and test API endpoints.
+* **JWT (JSON Web Token) Authorization:** Provides secure and portable authentication using AspNet Core Identity and JWT tokens.
+* **Rapid API:** Integrates with external data sources like hotel reservations, exchange rates, flight information, and social media metrics.
+* **Email Integration:** Supports sending reservation confirmations via email, integrated with AspNet Core Identity.
+* **Multi-Layered Architecture:** Separates business logic, data access, and user interfaces for scalable and maintainable code.
 
 ## 📁 Project Structure
 
@@ -150,10 +154,14 @@ cd HotelReservationProject
 dotnet restore
 ```
 
-4. Update the database:
+4. Create the initial migration and update the database:
 
-```bash
-dotnet ef database update
+```powershell
+# Create the initial migration
+Add-Migration InitialCreate -Project HotelProject.DataAccessLayer -StartupProject HotelProject.WebUI
+
+# Update the database
+Update-Database -Project HotelProject.DataAccessLayer -StartupProject HotelProject.WebUI
 ```
 
 5. Run the project:
